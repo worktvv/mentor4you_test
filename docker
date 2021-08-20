@@ -1,0 +1,370 @@
+c:\workspaceIdea\Mentor4you_Java_first>docker compose up
+[+] Running 3/3
+ - Container mysql_container    Running                                                                            0.0s
+ - Container mongo_container    Started                                                                           10.7s
+ - Container backend_container  Started                                                                            7.8s
+Attaching to backend_container, mongo_container, mysql_container
+backend_container  |
+backend_container  |   .   ____          _            __ _ _
+backend_container  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+backend_container  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+backend_container  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+backend_container  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+backend_container  |  =========|_|==============|___/=/_/_/_/
+backend_container  |  :: Spring Boot ::                (v2.5.3)
+backend_container  |
+backend_container  | 2021-08-20 10:15:57.372  INFO 1 --- [           main] com.mentor4you.DemoApplication           : Starting DemoApplication v0.0.1-SNAPSHOT using Java 11.0.12 on 3170824d0469 with PID 1 (/mentor4you_app.jar started by root in /)
+backend_container  | 2021-08-20 10:15:57.385  INFO 1 --- [           main] com.mentor4you.DemoApplication           : No active profile set, falling back to default profiles: default
+backend_container  | 2021-08-20 10:15:59.055  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+backend_container  | 2021-08-20 10:15:59.058  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+backend_container  | 2021-08-20 10:15:59.079  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+backend_container  | 2021-08-20 10:15:59.135  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+backend_container  | 2021-08-20 10:15:59.136  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+backend_container  | 2021-08-20 10:15:59.139  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 MongoDB repository interfaces.
+backend_container  | 2021-08-20 10:16:00.070  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+backend_container  | 2021-08-20 10:16:00.098  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+backend_container  | 2021-08-20 10:16:00.099  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+backend_container  | 2021-08-20 10:16:00.198  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+backend_container  | 2021-08-20 10:16:00.198  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2561 ms
+backend_container  | 2021-08-20 10:16:00.525  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+backend_container  | 2021-08-20 10:16:01.712 ERROR 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+backend_container  |
+backend_container  | com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+backend_container  |
+backend_container  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+backend_container  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) ~[spring-jdbc-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:184) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:143) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:103) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:95) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.3.jar!/:2.5.3]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+backend_container  |    at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at com.mentor4you.DemoApplication.main(DemoApplication.java:14) ~[classes!/:0.0.1-SNAPSHOT]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+backend_container  |    at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+backend_container  |
+backend_container  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+backend_container  |    at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:119) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    ... 56 common frames omitted
+backend_container  | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+backend_container  |    at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]backend_container  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
+backend_container  |    at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
+backend_container  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    ... 59 common frames omitted
+backend_container  |
+backend_container  | 2021-08-20 10:16:01.800  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+backend_container  | 2021-08-20 10:16:01.887  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+backend_container  | 2021-08-20 10:16:02.143  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+backend_container  | 2021-08-20 10:16:02.400  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+backend_container  | 2021-08-20 10:16:03.405 ERROR 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+backend_container  |
+backend_container  | com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+backend_container  |
+backend_container  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+backend_container  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at com.mentor4you.DemoApplication.main(DemoApplication.java:14) ~[classes!/:0.0.1-SNAPSHOT]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+backend_container  |    at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+backend_container  |
+backend_container  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+backend_container  |    at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:119) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    ... 57 common frames omitted
+backend_container  | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+backend_container  |    at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]backend_container  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
+backend_container  |    at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
+backend_container  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    ... 60 common frames omitted
+backend_container  |
+backend_container  | 2021-08-20 10:16:03.408  WARN 1 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+backend_container  |
+backend_container  | com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+backend_container  |
+backend_container  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+backend_container  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar!/:na]
+backend_container  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at com.mentor4you.DemoApplication.main(DemoApplication.java:14) ~[classes!/:0.0.1-SNAPSHOT]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+backend_container  |    at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+backend_container  |
+backend_container  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+backend_container  |    at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:119) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    ... 57 common frames omitted
+backend_container  | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+backend_container  |    at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+backend_container  |    at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]backend_container  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
+backend_container  |    at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
+backend_container  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.26.jar!/:8.0.26]
+backend_container  |    ... 60 common frames omitted
+backend_container  |
+backend_container  | 2021-08-20 10:16:03.415 ERROR 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+backend_container  | 2021-08-20 10:16:03.422  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+backend_container  | 2021-08-20 10:16:03.432  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+backend_container  | 2021-08-20 10:16:03.455  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener :
+backend_container  |
+backend_container  | Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+backend_container  | 2021-08-20 10:16:03.504 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+backend_container  |
+backend_container  | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar!/:2.5.3]
+backend_container  |    at com.mentor4you.DemoApplication.main(DemoApplication.java:14) ~[classes!/:0.0.1-SNAPSHOT]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+backend_container  |    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+backend_container  |    at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+backend_container  |    at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  |    at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[mentor4you_app.jar:0.0.1-SNAPSHOT]
+backend_container  | Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar!/:5.3.9]
+backend_container  |    ... 24 common frames omitted
+backend_container  | Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+backend_container  |    at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar!/:5.4.32.Final]
+backend_container  |    ... 41 common frames omitted
+backend_container  |
+backend_container exited with code 1
+mongo_container    | {"t":{"$date":"2021-08-20T10:16:53.007+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":"[1629454613:7550][1:0x7f632bb3c700], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 3, snapshot max: 3 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 57"}}
