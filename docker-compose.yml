@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+
+  db_mysql:
+    image: mysql:8
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: "mentor4you_db"
+      MYSQL_USER: "mentor4you"
+      MYSQL_PASSWORD: 1234
+    ports:
+      - 3308:3306
+  #    volumes:
+#      - /
+
+  mongodb:
+    image: mongo:5
+    container_name: mongo_container
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "mentor4you"
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+    ports:
+     - 27017:27017
+
+  backend:
+    #build: ./
+    image: springio/mentor-gs-spring-boot-docker1:latest
+    container_name: backend_container
+    ports:
+      - 8080:8081
+    depends_on:
+      - db_mysql
+      - mongodb
+    environment:
+      MYSQL_HOST: db_mysql
+      MONGODB_HOST: mongodb
